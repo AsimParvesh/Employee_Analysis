@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Model files
+models/*.pkl
+
+# Dataset (optional, if private)
+data/*.csv
+
+# Streamlit file
+.streamlit/
+
+# OS/system files
+.DS_Store
+Thumbs.db
