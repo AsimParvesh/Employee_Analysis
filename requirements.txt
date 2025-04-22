@@ -1,6 +1,5 @@
-```txt
 streamlit
 pandas
 scikit-learn
+imblearn
 joblib
-imbalanced-learn
