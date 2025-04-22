@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Model files
-models/*.pkl
-
 # Dataset (optional, if private)
 data/*.csv
 
