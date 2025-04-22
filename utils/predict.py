@@ -1,15 +1,21 @@
-import joblib
 import pandas as pd
+import os
+import joblib
 
-# Load models and preprocessing objects
-attrition_model = joblib.load("models/attrition_model.pkl")
-promotion_model = joblib.load("models/promotion_model.pkl")
+# Get the absolute path to the project root
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 
-attrition_scaler = joblib.load("models/attrition_scaler.pkl")
-promotion_scaler = joblib.load("models/promotion_scaler.pkl")
+# Load attrition model files
+attrition_model = joblib.load(os.path.join(MODEL_DIR, "attrition_model.pkl"))
+attrition_scaler = joblib.load(os.path.join(MODEL_DIR, "attrition_scaler.pkl"))
+attrition_encoders = joblib.load(os.path.join(MODEL_DIR, "attrition_encoders.pkl"))
 
-attrition_encoders = joblib.load("models/attrition_encoders.pkl")
-promotion_encoders = joblib.load("models/promotion_encoders.pkl")
+# Load promotion model files
+promotion_model = joblib.load(os.path.join(MODEL_DIR, "promotion_model.pkl"))
+promotion_scaler = joblib.load(os.path.join(MODEL_DIR, "promotion_scaler.pkl"))
+promotion_encoders = joblib.load(os.path.join(MODEL_DIR, "promotion_encoders.pkl"))
+
 
 def preprocess_input(input_data, encoders, scaler):
     df = pd.DataFrame([input_data])
