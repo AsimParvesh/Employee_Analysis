@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Dataset (optional, if private)
-data/*.csv
-
 # Streamlit file
 .streamlit/
 
