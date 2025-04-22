@@ -1,4 +1,8 @@
 import streamlit as st
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
+
 from utils.predict import predict_attrition, predict_promotion
 
 # Set page title
